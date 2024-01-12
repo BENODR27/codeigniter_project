@@ -2,7 +2,7 @@
 
 <?= $this->section('content') ?>
 
-<form action="<?= base_url('products/save') ?>" method="post">
+<form action="<?= base_url('products/save') ?>" method="post" enctype="multipart/form-data">
         <input type="hidden" name="id" >
 
         <label for="name">Name:</label>

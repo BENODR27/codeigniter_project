@@ -9,7 +9,7 @@ use App\Controllers\ProductController;
 $routes->get('/', 'Home::index');
 
 $routes->group('products', function ($routes) {
-    $routes->get('browse', 'ProductController::browse');
+    $routes->get('browse', 'ProductController::browse', ['as' => 'products.browse']);
     $routes->get('add', 'ProductController::add');
     $routes->post('save', 'ProductController::save');
     $routes->post('update', 'ProductController::update');
@@ -17,6 +17,11 @@ $routes->group('products', function ($routes) {
     $routes->get('edit/(:num)', 'ProductController::edit/$1'); // Use (:num) to capture a numeric parameter
     $routes->get('view/(:num)', 'ProductController::view/$1');
     $routes->get('delete/(:num)', 'ProductController::delete/$1');
+});
+
+
+$routes->group('api', ['namespace' => 'App\Controllers\Api'], function ($routes) {
+    $routes->resource('users');
 });
 
 service('auth')->routes($routes);

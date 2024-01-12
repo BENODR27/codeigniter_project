@@ -10,6 +10,7 @@ use App\Models\CategoryModel;
 
 class ProductController extends BaseController
 {
+    
     public function browse()
     {
         $productModel = new ProductModel();
