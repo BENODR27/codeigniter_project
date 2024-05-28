@@ -36,54 +36,7 @@ class Products extends Migration
         $this->forge->addForeignKey('category_id', 'categories', 'id', 'CASCADE', 'CASCADE');
         $this->forge->createTable('products');
     }
-    // public function up()
-    // {
-    //     $this->forge->addField([
-            // 'id' => [
-            //     'type' => 'INT',
-            //     'constraint' => 5,
-            //     'unsigned' => true,
-            //     'auto_increment' => true,
-            // ],
-            // 'name' => [
-            //     'type' => 'VARCHAR',
-            //     'constraint' => '255',
-            // ],
-            // 'email' => [
-            //     'type' => 'VARCHAR',
-            //     'constraint' => '255',
-            // ],
-            // Add more columns as needed
-            // 'description' => [
-            //     'type' => 'TEXT',
-            // ],
-            // 'price' => [
-            //     'type' => 'DECIMAL',
-            //     'constraint' => '10,2', // Total digits, decimal places
-            // ],
-            // 'start_date' => [
-            //     'type' => 'DATE',
-            // ],
-            // 'created_at' => [
-            //     'type' => 'DATETIME',
-            // ],
-            // 'status' => [
-            //     'type' => 'ENUM("active", "inactive")',
-            //     'default' => 'active',
-            // ],
-            // 'is_published' => [
-            //     'type' => 'BOOLEAN',
-            //     'default' => true,
-            // ],
-                                    
-            
-            
-            
-    //     ]);
 
-    //     $this->forge->addKey('id', true);
-    //     $this->forge->createTable('products');
-    // }
 
     public function down()
     {
